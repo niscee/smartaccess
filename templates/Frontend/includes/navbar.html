@@ -1,0 +1,113 @@
+{% load static %}
+
+<!-- style="background-color: #101130;" -->
+<header class="main-header">
+
+    <div class="main-box">
+
+        <div class="auto-container clearfix">
+
+            <div class="logo-box">
+
+                <div class="logo"><a href="index-2.html"><img src="{% static 'images/logo.png' %}" alt="" title=""></a>
+                </div>
+
+            </div>
+
+
+
+            <!--Nav Box-->
+            <div class="nav-outer clearfix">
+
+                <!--Mobile Navigation Toggler-->
+                <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+
+                <!-- Main Menu -->
+
+                <nav class="main-menu navbar-expand-md navbar-light">
+
+                    <div class="navbar-header">
+
+                        <!-- Toggle Button -->
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+
+                            <span class="icon flaticon-menu-button"></span>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+
+                        <ul class="navigation clearfix">
+
+                            <li><a href="{% url 'home' %}">Home</a></li>
+
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+
+                            <li><a href="#">Team</a></li>
+
+                            <li class="dropdown"><a href="blog-sidebar.html">Events</a>
+
+                                <ul>
+
+                                    <li><a href="blog-sidebar.html">Blog With Sidebar</a></li>
+
+                                    <li><a href="blog-grid.html">Blog Grid</a></li>
+
+                                    <li><a href="blog-single.html">Blog Single</a></li>
+
+                                    <li><a href="error-page.html">404 Error</a></li>
+
+                                </ul>
+
+                            </li>
+
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </nav>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Mobile Menu  -->
+
+    <div class="mobile-menu">
+
+        <div class="menu-backdrop"></div>
+
+        <div class="close-btn"><span class="icon flaticon-cancel-1"></span></div>
+
+
+        <nav class="menu-box">
+
+            <div class="nav-logo"><a href="index-2.html"><img src="images/logo-2.png" alt="" title=""></a></div>
+
+
+
+            <ul class="navigation clearfix">
+            </ul>
+
+        </nav>
+
+    </div><!-- End Mobile Menu -->
+
+
+
+</header>

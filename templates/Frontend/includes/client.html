@@ -1,0 +1,21 @@
+{% load static %}
+
+
+<!--Clients Section-->
+<section class="clients-section-three" style="background-color: #101130; margin-bottom: 120px;">
+    <div class="auto-container">
+        <div class="sponsors-outer">
+            <div class="sponsors-carousel owl-carousel owl-theme">
+                
+                <!-- Client Block -->
+                {% for client in clients %}
+                <div class="client-block">
+                    <figure class="image-box"><a href="{{ client.link }}" target="_blank"><img src="{{ client.imgURL }}" title="{{ client.title }}"></a></figure>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Clients Section-->

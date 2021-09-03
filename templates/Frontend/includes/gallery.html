@@ -1,0 +1,20 @@
+{% load static %}
+
+<!-- Gallery Section -->
+<section class="gallery-section style-two">
+    <div class="gallery-carousel owl-carousel owl-theme">
+        
+        {% for gallery in gallerys %}
+        <div class="gallery-item">
+            <div class="image-box">
+                <figure class="image"><img src="{{ gallery.imgURL }}" style="height: 320px;"></figure>
+                <div class="overlay-box"><a href="{{ gallery.imgURL }}"" class="lightbox-image" data-fancybox="gallery"><span
+                            class="icon fa fa-expand-arrows-alt"></span></a></div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+</section>
+<!--End Gallery Section -->
