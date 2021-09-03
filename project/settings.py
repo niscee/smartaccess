@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-95a&b=h0##8jzu0nqymk@)*z4)14_(x&j2_*mz8$h)#=u00a@e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["134.209.72.180"]
+# ALLOWED_HOSTS = ["134.209.72.180"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -86,16 +87,37 @@ WSGI_APPLICATION = 'project.wsgi.application'
 #         }
 #     }
 # else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#             'NAME': 'myproject',
+#             'USER': 'myprojectuser',
+#             'PASSWORD': 'password',
+#             'HOST': 'localhost',
+#             'PORT': '',
+#         }
+#     }
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'myproject',
+#         'USER': 'myprojectuser',
+#         'PASSWORD': 'password',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myproject',
-        'USER': 'myprojectuser',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '',
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
 
 
 # Password validation
