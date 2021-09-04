@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-95a&b=h0##8jzu0nqymk@)*z4)14_(x&j2_*mz8$h)#=u00a@e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+DEPLOY_CHECK = False
 
-ALLOWED_HOSTS = ["134.209.72.180"]
-# ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -80,7 +80,8 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-if DEBUG:
+if DEBUG and DEPLOY_CHECK:
+    ALLOWED_HOSTS = []
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -88,6 +89,7 @@ if DEBUG:
         }
     }
 else:
+    ALLOWED_HOSTS = ["134.209.72.180"]
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -100,7 +102,7 @@ else:
     }
 
 
-
+# ALLOWED_HOSTS = ["134.209.72.180"]
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -113,6 +115,7 @@ else:
 # }
 
 
+# ALLOWED_HOSTS = []
 # DATABASES = {
 #         'default': {
 #             'ENGINE': 'django.db.backends.sqlite3',
