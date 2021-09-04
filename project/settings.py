@@ -89,7 +89,7 @@ if DEBUG and DEPLOY_CHECK:
         }
     }
 else:
-    ALLOWED_HOSTS = ["134.209.72.180"]
+    ALLOWED_HOSTS = ["137.184.19.35"]
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
